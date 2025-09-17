@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Surco Vivo™ — Founder’s Edition</title>
+  <style>
+    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;background:#0b0f1a;color:#eef;line-height:1.6}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;gap:18px}
+    .logo{width:92px;height:92px;border-radius:16px;object-fit:cover;box-shadow:0 10px 28px rgba(0,0,0,.35);background:#fff}
+    h1{margin:0;color:#00bfff}
+    .panel{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(0,0,0,.08));border:1px solid #243;backdrop-filter:blur(6px);
+           border-radius:18px;padding:24px;margin-top:22px;box-shadow:0 12px 32px rgba(0,0,0,.25)}
+    .price{font-size:1.8rem;color:#00ffcc;margin:10px 0 18px}
+    .cta, .btn{display:inline-block;background:#00bfff;color:#fff;padding:12px 22px;border-radius:12px;text-decoration:none;font-weight:700;
+           box-shadow:0 8px 22px rgba(0,191,255,.25)}
+    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px} @media(max-width:920px){.grid{grid-template-columns:1fr}}
+    .note{color:#aab} .links a{color:#9fe} ul{margin:8px 0 0 20px}
+    .lang{margin-left:auto;display:flex;gap:8px} .lang a{color:#cfe;text-decoration:none;border:1px solid #243;border-radius:10px;padding:6px 10px}
+    .badge{display:inline-block;border:1px solid #264;border-radius:999px;padding:6px 12px;background:#0f1422;color:#cfe;margin:8px 0}
+    .soldout{opacity:.6;pointer-events:none}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="SurcoVivo_Logo_Blanco.png" class="logo" alt="Surco Vivo logo">
+      <div>
+        <h1>Surco Vivo™ — Founder’s Edition</h1>
+        <p id="intro">Automatización profesional de movimiento lineal: distancia de surco automática (pitch/LPI), previsualización y control desde tablet/móvil/PC con VST nativo.</p>
+      </div>
+      <nav class="lang">
+        <a href="#es" onclick="setLang('es')">ES</a><a href="#en" onclick="setLang('en')">EN</a>
+      </nav>
+    </header>
+
+    <section class="panel grid">
+      <div>
+        <div class="badge">Unidades restantes: <span id="units">—</span> / 5</div>
+        <div class="price" id="price">2150 € — (2000 € + 150 € envío mundial)</div>
+        <p id="delay">Entrega estimada: marzo 2026. Si hay retraso, 10% de descuento/mes sobre el precio del producto (no aplica a envío ni impuestos).</p>
+        <p id="features">Incluye automatización de lift/drop, distancia de surco automática (pitch/LPI), previsualización, presets/escenas, integración MIDI y control Serie/Web, VST nativo. Firmware actualizable, manual PDF + vídeo.</p>
+        <p id="pay-note"><b>Formas de pago:</b> PayPal (auto‑confirmación) o Transferencia bancaria.</p>
+        <p>
+          <a class="btn" id="paypal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=knyja-lopez@hotmail.com&item_name=Surco%20Vivo%E2%84%A2%20Founder%E2%80%99s%20Edition&amount=2150&currency_code=EUR&notify_url=https://surcovivo.vercel.app/api/paypal-ipn&return=https://surcovivo.vercel.app/thankyou.html&cancel_return=https://surcovivo.vercel.app/#checkout" target="_blank">Pagar con PayPal — 2150 €</a>
+          <a class="btn" href="#sepa">Transferencia SEPA</a>
+        </p>
+        <details id="sepa" open><summary id="sepa-sum">Transferencia bancaria — instrucciones</summary>
+          <p id="sepa-body"><b>Beneficiario:</b> Ruben Rubio Romero<br>
+          <b>IBAN:</b> ES2314650100961755266654<br>
+          <b>BIC:</b> INGDESMMXXX<br>
+          <b>Importe:</b> 2150,00 EUR<br>
+          <b>Concepto:</b> Founder‑TuEmail‑TuTeléfono</p>
+          <p><a class="btn" href="mailto:tf2crecords@gmail.com?subject=Comprobante%20transferencia%20Founder&body=Adjunto%20comprobante.%0ANombre:%20___%0ATel:%20___%0ADirección:%20___%0AIBAN%20de%20origen:%20___">Enviar comprobante</a></p>
+        </details>
+      </div>
+      <div class="panel">
+        <h3 id="incluye-title">Incluye</h3>
+        <ul id="incluye-list">
+          <li>Rack 19" con control y conectividad</li>
+          <li>Motores, adaptadores y cableado</li>
+          <li>Integración y adaptaciones para VR</li>
+          <li>Automatización de lift/drop, <b>distancia de surco automática</b>, previsualización</li>
+          <li>Control desde tablet/móvil/PC + <b>VST nativo</b></li>
+          <li>Manual PDF + vídeo; soporte por email</li>
+          <li>Unidad numerada (serie <b>ultra‑limitada a 5</b>)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h3 id="docs-title">Documentación</h3>
+      <div class="links">
+        <a href="Contrato_SurcoVivo_FoundersEdition_ES.pdf" id="es-doc">Contrato (ES)</a> ·
+        <a href="Preorder_Agreement_SurcoVivo_EN.pdf" id="en-doc">Agreement (EN)</a>
+      </div>
+    </section>
+
+    <footer style="margin-top:20px;color:#aac">© 2025 Surco Vivo™ — Contacto: <a href="mailto:tf2crecords@gmail.com" style="color:#9fe">tf2crecords@gmail.com</a></footer>
+  </div>
+
+<script>
+const T = {
+  es: {
+    intro: 'Automatización profesional de movimiento lineal: distancia de surco automática (pitch/LPI), previsualización y control desde tablet/móvil/PC con VST nativo.',
+    price: '2150 € — (2000 € + 150 € envío mundial)',
+    delay: 'Entrega estimada: marzo 2026. Si hay retraso, 10% de descuento/mes sobre el precio del producto (no aplica a envío ni impuestos).',
+    features: 'Incluye automatización de lift/drop, distancia de surco automática (pitch/LPI), previsualización, presets/escenas, integración MIDI y control Serie/Web, VST nativo. Firmware actualizable, manual PDF + vídeo.',
+    paynote: 'Formas de pago: PayPal (auto‑confirmación) o Transferencia bancaria.',
+    sepasum: 'Transferencia bancaria — instrucciones',
+    incluye: 'Incluye',
+    docs: 'Documentación',
+    paypalbtn: 'Pagar con PayPal — 2150 €'
+  },
+  en: {
+    intro: 'Professional linear‑motion automation: automatic groove spacing (pitch/LPI), preview, and control from tablet/phone/desktop with a native VST.',
+    price: '€2150 — (€2000 + €150 worldwide shipping)',
+    delay: 'Estimated delivery: March 2026. If delayed, 10% discount per month on the product price (shipping and taxes excluded).',
+    features: 'Includes automated lift/drop, automatic groove spacing (pitch/LPI), preview, presets/scenes, MIDI integration and Serial/Web control, native VST. Updatable firmware, PDF manual + video.',
+    paynote: 'Payment methods: PayPal (auto‑confirmation) or Bank transfer.',
+    sepasum: 'Bank transfer — instructions',
+    incluye: 'What’s included',
+    docs: 'Documentation',
+    paypalbtn: 'Pay with PayPal — €2150'
+  }
+};
+function setLang(lang){
+  const t = T[lang];
+  document.getElementById('intro').textContent = t.intro;
+  document.getElementById('price').textContent = t.price;
+  document.getElementById('delay').textContent = t.delay;
+  document.getElementById('features').textContent = t.features;
+  document.getElementById('pay-note').textContent = t.paynote;
+  document.getElementById('sepa-sum').textContent = t.sepasum;
+  document.getElementById('incluye-title').textContent = t.incluye;
+  document.getElementById('docs-title').textContent = t.docs;
+  document.getElementById('paypal').textContent = t.paypalbtn;
+  document.querySelector('html').setAttribute('lang', lang);
+}
+async function loadUnits(){
+  try{
+    const res = await fetch('/api/get-units', {cache:'no-cache'});
+    const data = await res.json();
+    const unitsEl = document.getElementById('units');
+    if (unitsEl) unitsEl.textContent = data.remaining;
+  }catch(e){ /* ignore */ }
+}
+loadUnits(); setLang('es');
+</script>
+</body>
+</html>

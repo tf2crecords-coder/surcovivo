@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gracias — Surco Vivo™</title>
+<style>body{font-family:system-ui;background:#0b0f1a;color:#eaf;margin:0} .wrap{max-width:800px;margin:0 auto;padding:28px}
+.panel{background:#0f1422;border:1px solid #243;border-radius:16px;padding:24px;box-shadow:0 12px 32px rgba(0,0,0,.25)} h1{color:#00ffcc}</style></head>
+<body><div class="wrap"><div class="panel">
+<h1 id="h">¡Gracias por tu colaboración!</h1>
+<p id="p1">Tu apoyo hace posible esta serie <b>ultra‑limitada (5 unidades)</b> del sistema Surco Vivo™. Estás dentro del <b>equipo fundador</b>.</p>
+<p id="p2">En las próximas horas recibirás un correo de confirmación y el contrato de preventa. Cualquier duda, escríbenos a <a href="mailto:tf2crecords@gmail.com">tf2crecords@gmail.com</a>.</p>
+<p id="p3">Si has pagado por transferencia, recuerda enviarnos el comprobante para acelerar la validación.</p>
+<a href="/" style="display:inline-block;margin-top:8px;color:#9fe">Volver a la página principal</a>
+</div></div>
+<script>
+const L={es:{h:'¡Gracias por tu colaboración!',p1:'Tu apoyo hace posible esta serie ultra‑limitada (5 unidades) del sistema Surco Vivo™. Estás dentro del equipo fundador.',
+p2:'En las próximas horas recibirás un correo de confirmación y el contrato de preventa. Cualquier duda, escríbenos a tf2crecords@gmail.com.',
+p3:'Si has pagado por transferencia, recuerda enviarnos el comprobante para acelerar la validación.'},
+en:{h:'Thank you for your support!',p1:'Your support makes this ultra‑limited (5 units) Surco Vivo™ series possible. You are part of the founding team.',
+p2:'You will receive a confirmation email and the pre‑order agreement shortly. For any questions, contact tf2crecords@gmail.com.',
+p3:'If you paid via bank transfer, please send us the receipt to speed up validation.'}};
+const lang = new URLSearchParams(location.search).get('lang')||'es'; const t=L[lang]||L.es;
+document.getElementById('h').textContent=t.h; document.getElementById('p1').textContent=t.p1; document.getElementById('p2').textContent=t.p2; document.getElementById('p3').textContent=t.p3;
+</script>
+</body></html>

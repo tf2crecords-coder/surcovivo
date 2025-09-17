@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Admin — Surco Vivo</title>
+<style>body{font-family:system-ui;margin:2rem} input,button{font-size:1rem;padding:.5rem;margin:.25rem}</style></head>
+<body>
+<h2>Admin — Unidades Founder’s Edition</h2>
+<p>Introduce tu <b>ORDER_SECRET</b> y ajusta el contador remoto (Upstash).</p>
+<p><label>ORDER_SECRET: <input id="sec" type="password"></label></p>
+<p><button onclick="dec()">-1 (vendida)</button> <button onclick="inc()">+1</button> <input id="setv" type="number" placeholder="fijar valor"><button onclick="setv()">Fijar</button></p>
+<pre id="out"></pre>
+<script>
+async function dec(){ await call('/api/decrement?qty=1'); }
+async function inc(){ await call('/api/decrement?qty=-1'); }
+async function setv(){ const v=document.getElementById('setv').value; await call('/api/set?value='+encodeURIComponent(v)); }
+async function call(url){
+  const sec=document.getElementById('sec').value;
+  const res=await fetch(url, {method:'POST', headers:{'x-order-secret':sec}});
+  document.getElementById('out').textContent=await res.text();
+}
+</script>
+</body></html>

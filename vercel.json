@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "/api/get-units", "dest": "/api/get-units.js" },
+    { "src": "/api/decrement", "dest": "/api/decrement.js" },
+    { "src": "/api/set", "dest": "/api/set.js" },
+    { "src": "/api/paypal-ipn", "dest": "/api/paypal-ipn.js" }
+  ]
+}
